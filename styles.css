@@ -1,0 +1,59 @@
+.game-box {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #007bff;
+    cursor: pointer;
+    background-color: #f8f9fa;
+    user-select: none;
+}
+
+.game-box.active {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.btn-danger {
+    background-color: #f44336;
+}
+
+.btn-danger:hover {
+    background-color: #ef5350;
+}
+
+#scoreHistory ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#scoreHistory li {
+    background-color: #f5f5f5;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+h3 {
+    color: #4caf50;
+}
+
+
+
+/* Footer styling */
+.footer {
+    background-color: #f8f9fa;  /* Warna latar belakang */
+    color: #333;                /* Warna teks */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+}
+
+.footer strong {
+    color: #007bff;  /* Warna nama Anda */
+}
+
+

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Reaksi Waktu</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #2835a3, #e4d7cc);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #homePage {
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+            border-radius: 15px;
+            background-color: rgba(0, 0, 0, 0.5);
+            flex: 1;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .form-control {
+            border-radius: 30px;
+            padding: 10px 20px;
+        }
+
+        .btn-primary,
+        .btn-secondary,
+        .btn-info,
+        .btn-score {
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            border-radius: 50px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-primary {
+            background-color: #1d1b9a;
+        }
+
+        .btn-primary:hover {
+            background-color: #2757b0;
+        }
+
+        .btn-secondary {
+            background-color: #6c757d;
+        }
+
+        .btn-secondary:hover {
+            background-color: #5a6268;
+        }
+
+        .btn-info {
+            background-color: #17a2b8;
+        }
+
+        .btn-info:hover {
+            background-color: #138496;
+        }
+        .btn-score {
+            background-color: #2757b0;
+        }
+        .btn-score:hover {
+            background-color: #17a2b8;
+        }
+
+        footer {
+            background-color: #000;
+            color: white;
+            padding: 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="text-center py-3">
+        <h1 class="text-white">Game Reaksi Waktu</h1>
+    </header>
+
+    <!-- Halaman Utama -->
+    <main>
+        <section id="homePage" class="container">
+            <h2>Selamat Datang di Game Reaksi Waktu</h2>
+            <p>Uji kecepatan reaksi Anda dengan permainan yang menyenangkan dan menarik ini!</p>
+            <div class="mb-3">
+                <input type="text" id="playerName" class="form-control" placeholder="Masukkan Nama Kamu" />
+            </div>
+            <div class="d-flex justify-content-center gap-3">
+                <button id="gamepage" class="btn btn-primary">Mulai Game</button>
+                <button id="howToPlay" class="btn btn-secondary">Tata Cara Bermain</button>
+                <button id="aboutMe" class="btn btn-info">Tentang Saya</button>
+                <button id="score" class="btn btn-score">Skor</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer mt-5 text-center">
+        <div class="container">
+            <p class="mb-0">&copy; 2025 <strong>Fauzan</strong>. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Tombol Mulai Game
+            $('#gamepage').click(function() {
+                const playerName = $('#playerName').val().trim();
+                if (!playerName) {
+                    alert('Masukkan nama Anda untuk memulai!');
+                    return;
+                }
+                localStorage.setItem('playerName', playerName || 'Tamu');
+                window.location.href = 'gamepage.html';
+            });
+
+            // Tombol Tata Cara Bermain
+            $('#howToPlay').click(function() {
+                window.location.href = 'howtoplay.html';
+            });
+
+            // Tombol Tentang Saya
+            $('#aboutMe').click(function() {
+                window.location.href = 'aboutme.html';
+            });
+
+            // Tombol Skor
+            $('#score').click(function() {
+                window.location.href = 'score.html';
+            });
+        });
+    </script>
+</body>
+</html>
